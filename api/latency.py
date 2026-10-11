@@ -41,6 +41,8 @@ class handler(BaseHTTPRequestHandler):
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        # browsers hide most response headers from page JS unless they're listed here
+        self.send_header("Access-Control-Expose-Headers", "Access-Control-Allow-Origin")
         self.send_header("Content-Type", "application/json")
         self.end_headers()
         if body is not None:
