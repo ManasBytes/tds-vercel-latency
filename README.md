@@ -6,7 +6,7 @@ from a sample telemetry file (`api/q-vercel-latency.json`).
 ## Usage
 
 ```bash
-curl -X POST https://tds-vercel-latency.vercel.app/api/latency \
+curl -X POST https://tds-vercel-latency-orcin.vercel.app/api/latency \
   -H "Content-Type: application/json" \
   -d '{"regions": ["apac", "emea"], "threshold_ms": 167}'
 ```
